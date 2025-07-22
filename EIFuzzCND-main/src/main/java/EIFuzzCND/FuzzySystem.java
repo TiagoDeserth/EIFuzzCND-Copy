@@ -13,7 +13,7 @@ import java.util.List;
 
 public class FuzzySystem {
     public static void main(String[] args) throws IOException, Exception {
-        String dataset = "synedc";
+        String dataset = "RBF4_40000";
         String caminho = (new File(".")).getCanonicalPath() + "/datasets/" + dataset + "/";
 
 
@@ -35,7 +35,10 @@ public class FuzzySystem {
         ConverterUtils.DataSource source;
         Instances data;
 
-        source = new ConverterUtils.DataSource(caminho + dataset +  "-train.arff");
+        // ADICIONE ESTA LINHA:
+        System.out.println("A tentar carregar o ficheiro: " + caminho + dataset + "-train.arff");
+
+        source = new ConverterUtils.DataSource(caminho + dataset + "-train.arff");
         data = source.getDataSet();
         data.setClassIndex(data.numAttributes() - 1);
 
