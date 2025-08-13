@@ -85,7 +85,7 @@ Edite o ficheiro principal para indicar qual dataset você quer executar.
         }
     }
     ```
-3. **(Opcional, mas importante)** Verifique se não há um espaço a mais na linha que carrega o ficheiro de treino (um bug no código original). A linha deve ser:
+3. **(Opcional, mas importante)** Verifique se não há um espaço a mais na linha que carrega o dataset de treino (um bug no código original). A linha deve ser:
    ```java
    source = new ConverterUtils.DataSource(caminho + dataset + "-train.arff");
    ```
